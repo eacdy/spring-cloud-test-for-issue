@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://https://github.com/eacdy/spring-cloud-test-for-issue.git/
+          username: null
+          password: null
+          search-paths:
+            - config-repo
+        health:
+          repositories:
+            a-foo:
+              label: master
+              name: microservice-foo
+              profiles: dev
